@@ -1,0 +1,6 @@
+*~
+backup.sh
+src/node/docs/*
+src/node/node_modules/*
+*.js
+

@@ -1,0 +1,12 @@
+
+* Create proper working dev environment: Makefile(s), dir structure etc.
+* Makefile needs to support:
+   - installation of develop/build environment (node.js, npm, docco, cofffeescript, etc)
+   - build/cleanup of project
+   - running tests
+   - generation of docco 
+   
+* BDD: Specs in Cucumber clone in node.js / tests in Jasmine
+* Creation of tests in CoffeeScript
+* Implementation of Shelves / Curator in CoffeeScript
+
