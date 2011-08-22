@@ -1,0 +1,20 @@
+{
+  "author": "Iwan van der Kleijn <iwanvanderkleijn@gmail.com> (http://skitr.com)",
+  "name": "bibliomaniac",
+  "description": "An ebook repository and information retrieval system",
+  "version": "0.0.1",
+  "homepage": "http://skitr.com/bibliomaniac",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soyrochus/bibliomaniac.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "make run-tests"
+  },
+  "engines": {
+    "node": "~v0.4.11"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

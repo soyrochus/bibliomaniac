@@ -4,11 +4,17 @@ CFLAGS=-c
 CWATCH=-w
 SRC=*.coffee
 TESTSRC=test/*.coffee
+MAIN=main.js
+NODE=node
+NPM=npm
+MODULES=coffee-script vows
 
-.PHONY: show all compile compile-tests watch run-tests docs clean
+.PHONY: show all run compile compile-tests watch run-tests docs clean 
 
 show:
 	@echo "make all          : build all files"
+	@echo "     run          : run application"
+	@echo "     deps         : install node packages needed to build & run the application"
 	@echo "     compile      : compile all coffeescript files to javascript"
 	@echo "     compile-tests: as above; for test files"
 	@echo "     watch        : compile all and watch for changes; compile as needed"
@@ -16,10 +22,16 @@ show:
 	@echo "     docs         : generate docco documentation"
 	@echo "     clean        : cleanup"
 
-all: compile compile-tests docs run-tests
+all: compile compile-tests docs run-tests deps
+
+run: compile
+	${NODE} ${MAIN}
 
 compile:
 		${CF} ${CFLAGS} ${SRC}
+
+deps:
+		${NPM} install ${MODULES}
 
 compile-tests:
 		${CF} ${CFLAGS} ${TESTSRC}
@@ -31,7 +43,7 @@ run-tests:
 		vows --spec test/*.js
 
 docs:
-		docco ${SRC} ${TESTSRC}
+		docco ${SRC} #${TESTSRC}
 clean:
 		rm *.js test/*.js
 		rm -rf docs/*
