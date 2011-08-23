@@ -7,7 +7,7 @@ TESTSRC=test/*.coffee
 MAIN=main.js
 NODE=node
 NPM=npm
-MODULES=coffee-script vows
+MODULES=coffee-script vows docco
 
 .PHONY: show all run compile compile-tests watch run-tests docs clean 
 
@@ -39,11 +39,12 @@ compile-tests:
 watch:
 		${CF} ${CFLAGS} ${CWATCH} ${SRC} ${TESTSRC}
 
-run-tests:
+run-tests: compile-tests
 		vows --spec test/*.js
 
 docs:
-		docco ${SRC} #${TESTSRC}
+		docco ${SRC} 
 clean:
 		rm *.js test/*.js
 		rm -rf docs/*
+		rm -rf node_modules/*

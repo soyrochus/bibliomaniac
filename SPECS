@@ -1,0 +1,49 @@
+
+Functional specification Bibliomaniac
+====================================
+
+# Introduction #
+
+This document contains the funcional specification of Bibliomaniac, as
+defined by both ts console as well as its web client interface, in a
+format known as "Gherkin". See Cucumber for the details. These so-called "Scenario's" in some environments are automatically converted to codo
+
+
+# Console client #
+
+Feature: Start console application withouth arguments
+  Given that the user starts application
+  When the user has noty specified any arguments
+  Then the help or "Usage" response should be shown
+
+
+Feaure
+
+  
+## Scenario: view choice - shell
+Feature: Application start; interface choice
+Given that the user start application
+When the user chooses commandline option "-s" or "--shell"
+Then the shell, or repl, mode should be shown
+
+## Scenario: application init
+
+Given that the repository is empty
+When the application start
+And the screen is presented to the user
+Then the user should see an empty Desk 
+
+## Scenario: import ebooks
+Given that the repository is empty
+When the user imports a directory
+And the import process succeeds
+Then the imported ebooks should be listed on the Desk
+
+## Scenario: show details book
+Given that the repository contains succesfully imported ebooks
+When the user selects an ebook for detais 
+Then the book details like meta-data, bibliography etc should be corrected shown on the Desk detail
+
+# Web client #
+
+

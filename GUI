@@ -1,0 +1,32 @@
+
+Client GUI specification
+========================
+
+Detailed design of client console and web interfaces
+----------------------------------------------------
+
+# Introduction #
+
+*TO BE DONE*
+
+# The console client #
+
+
+| Id   |Title                                      |Author            |Genre             |Format
+|-----------------------------------------------------------------------------------------------
+| 0001  A Cross of Centuries                        Henry Kuttner      anthology          epub  |
+| 0002  A crown of swords                           Robert Jordan      Fantasy            epub  |
+| 0003  Adam Bede                                   George Eliot       Historical novel   mobi  |
+| 0004  Adaptation                                  Mack Reynolds      Short novel        epub  |
+| 0005  Adaptogenia                                 Wayne Wightman     Horror             pdf   |
+
+
+*TO BE DONE*
+
+
+# The web client #
+
+*TO BE DONE*
+
+
+
